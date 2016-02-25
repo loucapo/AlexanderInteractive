@@ -1,7 +1,7 @@
 $( document ).ready( function () {
 
     $.getJSON( 'content.json', function( data ) {
-        var items = [], checks = [], tabs = [], content = [], i = 1;
+        var items = [], i = 1;
 
         $.each( data.tabs, function( key, val ) {
             var checked = ( i === 1 ) ? 'checked' : '';
