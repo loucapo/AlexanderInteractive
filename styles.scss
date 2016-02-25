@@ -1,5 +1,7 @@
 //variables
 $maxWidth: 980px;
+$gray: #ccc;
+$silver: #eee;
 
 //mixins
 @mixin flex-it($type, $justify) {
@@ -19,6 +21,10 @@ $maxWidth: 980px;
   -webkit-border-top-left-radius: $radius;
   border-top-left-radius: $radius;
   background-clip: padding-box;
+}
+
+body {
+  margin: 0;
 }
 
 .container {
@@ -48,7 +54,7 @@ $maxWidth: 980px;
 
     .panel {
       background-color: #fff;
-      border: 1px solid #ccc;
+      border: 1px solid $gray;
       border-top: 0;
       display: none;
       flex-basis: auto;
@@ -60,17 +66,17 @@ $maxWidth: 980px;
   }
 
   .tab {
-    background-color: #eee;
-    border: 1px solid #ccc;
+    background-color: $silver;
+    border: 1px solid $gray;
     cursor: hand;
     cursor: pointer;
     display: inline-block;
     padding: 10px;
     vertical-align: top;
-    /* border-left: 10px solid #ccc; */
+    /* border-left: 10px solid $gray; */
 
     &:hover {
-      background-color: #ccc;
+      background-color: $gray;
     }
   }
 
