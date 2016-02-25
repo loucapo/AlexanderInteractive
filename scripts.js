@@ -3,7 +3,9 @@ $( document ).ready( function () {
     $.getJSON( 'content.json', function( data ) {
         var items = [], i = 1;
 
-        $.each( data.tabs, function( key, val ) {
+        content = data && data.tabs || [];
+
+        $.each( content, function( key, val ) {
             var checked = ( i === 1 ) ? 'checked' : '';
 
             // split into multiple lines for legibility
