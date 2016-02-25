@@ -1,0 +1,77 @@
+.container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    /* background-color: red; */
+    max-width: 980px;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.tabs .state {
+    display: none;
+}
+
+.tabs .flexi-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.tabs .flexi-tabs .tab {
+    flex-grow: 1;
+    max-height: 40px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-clip: padding-box;
+}
+
+.tabs .flexi-tabs .panel {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: 0;
+    display: none;
+    flex-basis: auto;
+    padding: 20px;
+    position: relative;
+    top: -1px;
+    width: 100%;
+}
+
+.tabs .tab {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: hand;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    /* border-left: 10px solid #ccc; */
+}
+
+.tabs .tab:hover {
+    background-color: #ccc;
+}
+
+.tabs #tab1:checked ~ .tabs #tab1-label,
+.tabs #tab2:checked ~ .tabs #tab2-label,
+.tabs #tab3:checked ~ .tabs #tab3-label {
+    background-color: #fff;
+    cursor: default;
+}
+
+.tabs #tab1:checked ~ .tabs #tab1-panel,
+.tabs #tab2:checked ~ .tabs #tab2-panel,
+.tabs #tab3:checked ~ .tabs #tab3-panel {
+    display: block;
+}
+
+/*# sourceMappingURL=styles.css.map */
