@@ -1,5 +1,6 @@
 //variables
 $maxWidth: 980px;
+$dark-gray: #333;
 $gray: #ccc;
 $silver: #eee;
 
@@ -7,10 +8,13 @@ $silver: #eee;
 @mixin flex-it($type, $justify) {
   display: -webkit-flex;
   display: flex;
+
   -webkit-flex-direction: $type;
   flex-direction: $type;
+
   -webkit-align-items: $justify;
   align-items: $justify;
+
   -webkit-justify-content: $justify;
   justify-content: $justify;
 }
@@ -18,79 +22,73 @@ $silver: #eee;
 @mixin border-top-radius($radius) {
   -webkit-border-top-right-radius: $radius;
   border-top-right-radius: $radius;
+
   -webkit-border-top-left-radius: $radius;
   border-top-left-radius: $radius;
+
   background-clip: padding-box;
 }
 
+//styles
 body {
+  color: $dark-gray;
   margin: 0;
 }
 
 .container {
-  @include flex-it(row, center);
-  max-width: $maxWidth;
   margin: auto;
+  max-width: $maxWidth;
   padding-top: 100px;
+
+  @include flex-it(row, left);
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.tabs {
+label {
+  background: $silver;
+  border: 1px solid $gray;
+  @include border-top-radius(5px);
+  cursor: pointer;
+  flex-grow: 1;
+  margin-left: -1px;
+  padding: 10px;
+}
 
-  .state {
-    display: none;
+label:first-of-type {
+  margin-left: 0;
+}
+
+div.content {
+  border: 1px solid $gray;
+  border-top: 0;
+  margin-top: -1px;
+  -webkit-order: 1;
+  order: 1;
+  padding: 15px;
+  width: 100%;
+}
+
+input[type=radio], div {
+  display: none;
+}
+
+input[type=radio]:checked + label {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+input[type=radio]:checked + label + div {
+  display: block;
+}
+
+// mobile phone media query
+@media only screen and (max-device-width: 480px) {
+  .container {
+    flex-direction: column;
   }
 
-  .flexi-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-
-    .tab {
-      flex-grow: 1;
-      max-height: 40px;
-      @include border-top-radius(5px);
-    }
-
-    .panel {
-      background-color: #fff;
-      border: 1px solid $gray;
-      border-top: 0;
-      display: none;
-      flex-basis: auto;
-      padding: 20px;
-      position: relative;
-      top: -1px;
-      width: 100%;
-    }
-  }
-
-  .tab {
-    background-color: $silver;
-    border: 1px solid $gray;
-    cursor: hand;
-    cursor: pointer;
-    display: inline-block;
-    padding: 10px;
-    vertical-align: top;
-    /* border-left: 10px solid $gray; */
-
-    &:hover {
-      background-color: $gray;
-    }
-  }
-
-  #tab1:checked ~ .tabs #tab1-label,
-  #tab2:checked ~ .tabs #tab2-label,
-  #tab3:checked ~ .tabs #tab3-label {
-    background-color: #fff;
-    cursor: default;
-    //border-left-color: #69be28;
-  }
-
-  #tab1:checked ~ .tabs #tab1-panel,
-  #tab2:checked ~ .tabs #tab2-panel,
-  #tab3:checked ~ .tabs #tab3-panel {
-    display: block;
+  div.content {
+    order: 0;
   }
 }

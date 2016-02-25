@@ -1,0 +1,21 @@
+{
+  "tabs": [
+    {
+      "label": "Lorem ipsum 1",
+      "title": "Lorem-ipsum-1",
+      "content": "1 Lorem ipsum dolor sit amet 1"
+    },
+
+    {
+      "label": "Lorem ipsum 2",
+      "title": "Lorem-ipsum-2",
+      "content": "2 Lorem ipsum dolor sit amet 2"
+    },
+
+    {
+      "label": "Lorem ipsum 3",
+      "title": "Lorem-ipsum-3",
+      "content": "3 Lorem ipsum dolor sit amet 3"
+    }
+  ]
+}
