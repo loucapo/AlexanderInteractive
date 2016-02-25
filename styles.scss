@@ -23,7 +23,6 @@ $maxWidth: 980px;
 
 .container {
   @include flex-it(row, center);
-  /* background-color: red; */
   max-width: $maxWidth;
   margin: auto;
   padding-top: 100px;
