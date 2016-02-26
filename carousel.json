@@ -1,0 +1,48 @@
+{
+  "carousel": [
+    {
+      "url": "https://placekitten.com/200/300",
+      "title": "Image One"
+    },
+    {
+      "url": "https://placekitten.com/200/300",
+      "title": "Image Two"
+    },
+    {
+      "url": "https://placekitten.com/200/300",
+      "title": "Image Three"
+    },
+    {
+      "url": "https://placekitten.com/200/300",
+      "title": "Image Four"
+    },
+    {
+      "url": "https://placekitten.com/200/300",
+      "title": "Image Five"
+    },
+    {
+      "url": "https://placekitten.com/200/300",
+      "title": "Image Six"
+    },
+    {
+      "url": "https://placekitten.com/200/300",
+      "title": "Image Seven"
+    },
+    {
+      "url": "https://placekitten.com/200/300",
+      "title": "Image Eight"
+    },
+    {
+      "url": "https://placekitten.com/200/300",
+      "title": "Image Nine"
+    },
+    {
+      "url": "https://placekitten.com/200/300",
+      "title": "Image Ten"
+    },
+    {
+      "url": "https://placekitten.com/200/300",
+      "title": "Image Eleven"
+    },
+  ]
+}
